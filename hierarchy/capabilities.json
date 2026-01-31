@@ -1,0 +1,208 @@
+
+
+{"privileges": [],
+  "dataRoles": [
+    { "name": "hierarchy", "kind": "Grouping", "displayName": "Hierarchy Field" },
+    { "name": "parent", "kind": "Grouping", "displayName": "Parent Field" },
+    { "name": "fields", "kind": "Grouping", "displayName": "Fields" },
+    { "name": "dropdown", "kind": "Grouping", "displayName": "Dropdown field" },
+    { "name": "sparkline", "kind": "Measure", "displayName": "Sparkline" },
+    { "name": "values", "kind": "Measure", "displayName": "Values" },
+    { "name": "tooltip", "kind": "Measure", "displayName": "Tooltip" }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "hierarchy": { "max": 1 },
+          "parent": { "max": 1 },
+          "fields": { "max": 10 },
+          "dropdown": { "max": 1 },
+          "sparkline": { "max": 1 },
+          "values": { "max": 1 },
+          "tooltip": { "max": 1 }
+        }
+      ],
+      "categorical": {
+        "categories": {
+          "select": [
+            { "for": { "in": "hierarchy" } },
+            { "for": { "in": "parent" } },
+            { "for": { "in": "fields" } },
+            { "for": { "in": "dropdown" } }
+          ]
+        },
+        "values": {
+          "select": [
+            { "bind": { "to": "sparkline" } },
+            { "bind": { "to": "values" } },
+            { "bind": { "to": "tooltip" } }
+          ]
+        }
+      }
+    }
+  ],
+  "objects": {
+    "layout": {
+      "displayName": "Layout",
+      "properties": {
+        "orientation": {
+          "displayName": "Orientation",
+          "type": { "enumeration": [
+            { "displayName": "Top-Down", "value": "TD" },
+            { "displayName": "Left-Right", "value": "LR" }
+          ]}
+        },
+        "levelSpacing": { "displayName": "Level spacing", "type": { "numeric": true } },
+        "siblingSpacing": { "displayName": "Sibling spacing", "type": { "numeric": true } },
+        "cardWidth": { "displayName": "Card width", "type": { "numeric": true } },
+        "cardHeight": { "displayName": "Card height", "type": { "numeric": true } }
+      }
+    },
+    "appearance": {
+      "displayName": "Appearance",
+      "properties": {
+        "useBackground": { "displayName": "Use background", "type": { "bool": true } },
+        "backgroundColor": {
+          "displayName": "Background color",
+          "type": { "fill": { "solid": { "color": true } } }
+        }
+      }
+    },
+    "lines": {
+      "displayName": "Lines",
+      "properties": {
+        "lineColor": {
+          "displayName": "Line color",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "activeColor": {
+          "displayName": "Active line color",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "lineWidth": { "displayName": "Line width", "type": { "numeric": true } },
+        "lineStyle": {
+          "displayName": "Line style",
+          "type": { "enumeration": [
+            { "displayName": "Solid", "value": "solid" },
+            { "displayName": "Dashed", "value": "dashed" }
+          ]}
+        },
+        "showArrows": { "displayName": "Show pointers", "type": { "bool": true } },
+        "tipStyle": {
+          "displayName": "Line tip",
+          "type": { "enumeration": [
+            { "displayName": "Arrow", "value": "arrow" },
+            { "displayName": "None", "value": "none" },
+            { "displayName": "Square", "value": "square" },
+            { "displayName": "Diamond", "value": "diamond" },
+            { "displayName": "Circle", "value": "circle" }
+          ]}
+        },
+        "tipSize": { "displayName": "Tip size", "type": { "numeric": true } }
+      }
+    },
+    "nodes": {
+      "displayName": "Nodes",
+      "properties": {
+        "fillColor": {
+          "displayName": "Fill color",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "strokeColor": {
+          "displayName": "Border color",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "strokeWidth": { "displayName": "Border width", "type": { "numeric": true } },
+        "cornerRadius": { "displayName": "Corner radius", "type": { "numeric": true } },
+        "shape": {
+          "displayName": "Shape",
+          "type": { "enumeration": [
+            { "displayName": "Rounded", "value": "rounded" },
+            { "displayName": "Square", "value": "square" },
+            { "displayName": "Pill", "value": "pill" }
+          ]}
+        },
+        "showShadow": { "displayName": "Shadow", "type": { "bool": true } },
+        "titleColor": {
+          "displayName": "Title color",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "valueColor": {
+          "displayName": "Value color",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "titleAlign": {
+          "displayName": "Title align",
+          "type": { "enumeration": [
+            { "displayName": "Left", "value": "left" },
+            { "displayName": "Center", "value": "center" },
+            { "displayName": "Right", "value": "right" }
+          ]}
+        },
+        "titleWrap": { "displayName": "Title wrap", "type": { "bool": true } },
+        "titleFontSize": { "displayName": "Title font size", "type": { "numeric": true } },
+        "titleFontFamily": { "displayName": "Title font family", "type": { "text": true } },
+        "titleFontStyle": {
+          "displayName": "Title font style",
+          "type": { "enumeration": [
+            { "displayName": "Normal", "value": "normal" },
+            { "displayName": "Bold", "value": "bold" },
+            { "displayName": "Italic", "value": "italic" },
+            { "displayName": "Bold Italic", "value": "boldItalic" }
+          ]}
+        }
+      }
+    },
+    "levels": {
+      "displayName": "Level colors",
+      "properties": {
+        "enableLevelColors": { "displayName": "Enable", "type": { "bool": true } },
+        "level1Color": { "displayName": "Level 1", "type": { "fill": { "solid": { "color": true } } } },
+        "level2Color": { "displayName": "Level 2", "type": { "fill": { "solid": { "color": true } } } },
+        "level3Color": { "displayName": "Level 3", "type": { "fill": { "solid": { "color": true } } } },
+        "level4Color": { "displayName": "Level 4", "type": { "fill": { "solid": { "color": true } } } },
+        "level5Color": { "displayName": "Level 5", "type": { "fill": { "solid": { "color": true } } } },
+        "level6Color": { "displayName": "Level 6", "type": { "fill": { "solid": { "color": true } } } }
+      }
+    },
+    "controls": {
+      "displayName": "Controls",
+      "properties": {
+        "showControls": { "displayName": "Show toolbar", "type": { "bool": true } },
+        "showSearch": { "displayName": "Show search", "type": { "bool": true } },
+        "showHierarchyFilter": { "displayName": "Show hierarchy filter", "type": { "bool": true } },
+        "showParentFilter": { "displayName": "Show parent filter", "type": { "bool": true } },
+        "showDropdownFilter": { "displayName": "Show dropdown filter", "type": { "bool": true } },
+        "showZoom": { "displayName": "Show zoom", "type": { "bool": true } },
+        "showViewToggle": { "displayName": "Show view toggle", "type": { "bool": true } },
+        "showCollapseExpand": { "displayName": "Show collapse/expand", "type": { "bool": true } },
+        "defaultView": {
+          "displayName": "Default view",
+          "type": { "enumeration": [
+            { "displayName": "Tree", "value": "tree" },
+            { "displayName": "Table", "value": "table" }
+          ]}
+        },
+        "doubleClickZoomPercent": { "displayName": "Double-click zoom (%)", "type": { "numeric": true } }
+      }
+    },
+    "table": {
+      "displayName": "Table view",
+      "properties": {
+        "showHeader": { "displayName": "Show header", "type": { "bool": true } },
+        "rowHeight": { "displayName": "Row height", "type": { "numeric": true } },
+        "zebra": { "displayName": "Zebra rows", "type": { "bool": true } }
+      }
+    }
+  },
+  "tooltips": {
+    "supported": true,
+    "roles": [ "tooltip" ]
+  },
+  "supportsHighlight": true,
+  "supportsKeyboardFocus": true,
+  "supportsLandingPage": true,
+  "supportsMultiVisualSelection": true,
+  "sorting": { "default": {} }
+}

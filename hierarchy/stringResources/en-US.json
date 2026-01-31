@@ -1,0 +1,30 @@
+{
+  "locale": "en-US",
+  "values": {
+    "Visual.Name": "Hierarchy Flow",
+    "Message.NoData": "Add Hierarchy Field and Parent Field to the visual. Optional: Fields, Sparkline, Values, Tooltip.",
+    "Message.InvalidHierarchy": "Invalid hierarchy: duplicates, cycles, or missing parents.",
+    "Message.NoMatches": "No matches.",
+    "Landing.Title": "Build your hierarchy",
+    "Landing.Body": "Add Hierarchy Field and Parent Field to start. Optional: Fields, Sparkline, Values, Tooltip.",
+    "Toolbar.Tree": "Tree",
+    "Toolbar.Table": "Table",
+    "Toolbar.Collapse": "Collapse",
+    "Toolbar.Expand": "Expand",
+    "Toolbar.ZoomIn": "Zoom in",
+    "Toolbar.ZoomOut": "Zoom out",
+    "Toolbar.ZoomInput": "Zoom percent",
+    "Toolbar.SearchPlaceholder": "Search",
+    "Toolbar.SearchClear": "Clear search",
+    "Toolbar.FilterHierarchy": "Hierarchy filter",
+    "Toolbar.FilterParent": "Parent filter",
+    "Toolbar.FilterDropdown": "Dropdown filter",
+    "Toolbar.FilterHierarchyAll": "All hierarchy",
+    "Toolbar.FilterParentAll": "All parents",
+    "Toolbar.FilterDropdownAll": "All",
+    "Table.Header.Name": "Name",
+    "Table.Header.Fields": "Fields",
+    "Table.Header.Value": "Value",
+    "Table.Header.Sparkline": "Sparkline"
+  }
+}
